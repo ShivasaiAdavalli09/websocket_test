@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Example</h1>
+    <script>
+        var socket = new WebSocket("ws://localhost:8080/websocket");
+
+        socket.onopen = function() {
+            alert("WebSocket connection opened.");
+        };
+
+        socket.onmessage = function(event) {
+            alert("Received message: " + event.data);
+        };
+
+        socket.onclose = function() {
+            alert("WebSocket connection closed.");
+        };
+    </script>
+</body>
+</html>

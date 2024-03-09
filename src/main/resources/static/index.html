@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <script>
+        // JavaScript WebSocket code goes here
+        const socket = new WebSocket("ws://localhost:8080/websocket");
+
+        // Event listeners and other JavaScript WebSocket code...
+		// Event listener for when the WebSocket connection is opened
+        socket.onopen = function(event) {
+            console.log("WebSocket connection established.");
+            
+            // Send a message to the WebSocket server after the connection is opened
+            socket.send("Hello, WebSocket server!");
+        };
+
+        // Event listeners for handling other WebSocket events...
+
+        // Log a message to confirm that the JavaScript code is executed
+        console.log("WebSocket client script loaded.");
+    </script>
+</body>
+</html>
